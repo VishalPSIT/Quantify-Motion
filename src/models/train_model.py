@@ -1,3 +1,4 @@
+#286
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -7,6 +8,8 @@ from learning_algorithm import ClassificationAlgorithms
 import seaborn as sns
 import itertools
 from sklearn.metrics import accuracy_score, confusion_matrix
+
+
 
 # Plot settings
 plt.style.use("fivethirtyeight")
@@ -250,14 +253,7 @@ plt.show()
 # --------------------------------------------------------------
 # Select best model and evaluate results
 # --------------------------------------------------------------
-(
-class_train_y,
-class_test_y,
-class_train_prob_y,
-class_test_prob_y,
-) = learner.random_forest(
-    X_train[feature_set_4], y_train, X_test[feature_set_4], gridsearch=True
-)
+
 
 accuracy = accuracy_score(y_test, class_test_y)
 
@@ -287,7 +283,7 @@ plt.xlabel("Predicted label")
 plt.grid(False)
 plt.show()
 
-
+# till here 
 # --------------------------------------------------------------
 # Select train and test data based on participant
 # --------------------------------------------------------------
