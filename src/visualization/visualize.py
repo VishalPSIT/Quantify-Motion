@@ -1,6 +1,6 @@
 
 
-
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -96,7 +96,8 @@ plt.legend()
 
 labels = df["label"].unique()
 participants = df["participant"].unique()
-
+output_folder = "plots"
+os.makedirs(output_folder, exist_ok=True)
 for label in labels:
     for participant in participants:
         all_axis_df = (
@@ -113,6 +114,7 @@ for label in labels:
             plt.title(f"{label} ({participant})".title())
             plt.legend()
             
+            
 for label in labels:
     for participant in participants:
         all_axis_df = (
@@ -128,6 +130,7 @@ for label in labels:
             ax.set_xlabel("samples")
             plt.title(f"{label} ({participant})".title())
             plt.legend()
+            
             
 
 # --------------------------------------------------------------

@@ -71,6 +71,7 @@ acc_df[acc_df["set"] == 10]
 # --------------------------------------------------------------
 
 acc_df.info()
+gyr_df.info()
 
 pd.to_datetime(df["epoch (ms)"], unit="ms")
 # pd.to_datetime(df["time (01:00)"]).dt.month
